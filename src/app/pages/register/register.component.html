@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="title">Registration</div>
+  <div class="register-content">
+    <form [formGroup]="registerform" (ngSubmit)="register()">
+      <div class="user-details">
+        <div class="input-box form-group">
+          <label class="details">First Name</label>
+          <input
+            type="text"
+            formControlName="Firstname"
+            placeholder="Enter your first name"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+        <div class="input-box form-group">
+          <label class="details">Last Name</label>
+          <input
+            type="text"
+            formControlName="Lastname"
+            placeholder="Enter your last name"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <div class="input-box form-group">
+          <label class="details">Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="input-box form-group">
+          <label class="details">Phone Number</label>
+          <input
+            type="number"
+            formControlName="phone"
+            placeholder="Enter your number"
+            required
+          />
+        </div>
+        <div class="input-box form-group">
+          <label class="details">Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <!-- <div class="input-box form-group">
+          <label class="details">Image</label>
+          <input
+            type="file"
+            formControlName="image"
+            placeholder="Choose file"
+            required
+          />
+        </div> -->
+        <!-- <div class="input-box form-group">
+          <label class="details">Confirm Password</label>
+          <input
+            type="password"
+            formControlName="confirm_password"
+            placeholder="Confirm your password"
+            required
+          />
+        </div> -->
+      </div>
+      <div class="button">
+        <input type="submit" value="Register" />
+      </div>
+      <div class="signup-link">
+        Already a member? <a routerLink="/login">Login now</a>
+      </div>
+    </form>
+  </div>
+</div>

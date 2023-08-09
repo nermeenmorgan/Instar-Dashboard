@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="title">Login Form</div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="field">
+      <input type="text" formControlName="email" required />
+      <label>Email</label>
+    </div>
+    <div class="field">
+      <input type="password" formControlName="password" required />
+      <label>Password</label>
+    </div>
+    <div class="login-content">
+      <div class="checkbox">
+        <input type="checkbox" id="remember-me" ngModel />
+        <label for="remember-me">Remember me</label>
+      </div>
+      <div class="pass-link">
+        <a routerLink="/forgetPass">Forgot password?</a>
+      </div>
+    </div>
+    <div class="field">
+      <input type="submit" value="Login" />
+    </div>
+    <div class="signup-link">
+      Not a member? <a routerLink="/register">Signup now</a>
+    </div>
+  </form>
+</div>
