@@ -35,6 +35,6 @@ export class UsersListComponent {
 
   //get users list from api
   ngOnInit() { }
-
+  
 
 }

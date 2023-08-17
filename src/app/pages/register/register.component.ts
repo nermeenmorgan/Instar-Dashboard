@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -8,48 +8,44 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+// ... imports and component decorator ...
+
 export class RegisterComponent implements OnInit {
-
-  registerform: FormGroup;
-
-  
+  registerform!: FormGroup;
   image: any;
-  select(e:any){
-    this.image = e.target.files[0];
-  }
 
   constructor(private fb: FormBuilder, private _auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.registerform = this.fb.group({
-      Firstname: [''],
-      Lastname: [''],
-      email: [''],
-      phone: [''],
-      password: [''],
-      // image: ['']
-      // confirm_password: ['']
+      Firstname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      Lastname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
-    
-
   }
- 
+
   register() {
+    if (this.registerform.invalid) {
+      return; // Form is invalid, don't proceed with registration
+    }
+
     this._auth.register(this.registerform.value)
       .subscribe(
-        res => {
-          if (this.registerform.value) {
+        () => {
           alert("Register Successful");
-          console.log(res)
-          this.registerform.reset();
+          this.registerform.reset(); // Reset the form
           this.router.navigate(['login']);
-        } else {
-          alert("Register Failed");
-        }
         },
-        err => { 
-          alert("Something went wrong")
+        (error) => {
+          alert(`Register Failed: ${error.message}`);
         }
-      )
+      );
+  }
+
+  select(e: any) {
+    this.image = e.target.files[0];
   }
 }
+
