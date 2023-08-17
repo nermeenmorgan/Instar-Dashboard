@@ -13,6 +13,7 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './pages/login/login.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
+import { ProductsListComponent } from './pages/products-list/products-list.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { UsersListComponent } from './pages/users-list/users-list.component';
         DashboardLayoutComponent,
         AuthLayoutComponent,
         UsersListComponent,
+        ProductsListComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

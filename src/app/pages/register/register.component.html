@@ -13,6 +13,15 @@
             maxlength="20"
             required
           />
+          <div
+            class="error-message"
+            *ngIf="
+              registerform.get('Firstname')?.invalid &&
+              registerform.get('Firstname')?.touched
+            "
+          >
+            First Name must be between 3 and 20 characters.
+          </div>
         </div>
         <div class="input-box form-group">
           <label class="details">Last Name</label>
@@ -24,6 +33,15 @@
             maxlength="20"
             required
           />
+          <div
+            class="error-message"
+            *ngIf="
+              registerform.get('Lastname')?.invalid &&
+              registerform.get('Lastname')?.touched
+            "
+          >
+            Last Name must be between 3 and 20 characters.
+          </div>
         </div>
 
         <div class="input-box form-group">
@@ -34,6 +52,15 @@
             placeholder="Enter your email"
             required
           />
+          <div
+            class="error-message"
+            *ngIf="
+              registerform.get('email')?.invalid &&
+              registerform.get('email')?.touched
+            "
+          >
+            Please enter a valid email.
+          </div>
         </div>
         <div class="input-box form-group">
           <label class="details">Phone Number</label>
@@ -43,6 +70,15 @@
             placeholder="Enter your number"
             required
           />
+          <div
+            class="error-message"
+            *ngIf="
+              registerform.get('phone')?.invalid &&
+              registerform.get('phone')?.touched
+            "
+          >
+            Phone Number is required.
+          </div>
         </div>
         <div class="input-box form-group">
           <label class="details">Password</label>
@@ -52,28 +88,23 @@
             placeholder="Enter your password"
             required
           />
+          <div
+            class="error-message"
+            *ngIf="
+              registerform.get('password')?.invalid &&
+              registerform.get('password')?.touched
+            "
+          >
+            Password is required.
+          </div>
         </div>
-        <!-- <div class="input-box form-group">
-          <label class="details">Image</label>
-          <input
-            type="file"
-            formControlName="image"
-            placeholder="Choose file"
-            required
-          />
-        </div> -->
-        <!-- <div class="input-box form-group">
-          <label class="details">Confirm Password</label>
-          <input
-            type="password"
-            formControlName="confirm_password"
-            placeholder="Confirm your password"
-            required
-          />
-        </div> -->
       </div>
       <div class="button">
-        <input type="submit" value="Register" />
+        <input
+          type="submit"
+          value="Register"
+          [disabled]="registerform.invalid"
+        />
       </div>
       <div class="signup-link">
         Already a member? <a routerLink="/login">Login now</a>
