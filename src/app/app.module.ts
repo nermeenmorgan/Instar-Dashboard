@@ -14,6 +14,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './pages/login/login.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
+import { StatsComponent } from './pages/stats/stats.component';
+import { RequestsComponent } from './pages/requests/requests.component';
+import { SalesComponent } from './pages/sales/sales.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +25,9 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
         AuthLayoutComponent,
         UsersListComponent,
         ProductsListComponent,
+        StatsComponent,
+        RequestsComponent,
+        SalesComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
