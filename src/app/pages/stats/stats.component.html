@@ -1,0 +1,269 @@
+<!-- <div class="cardBox">
+  <div class="left-row">
+    <div class="card">
+      <div class="sub-card">
+        <div class="cardName">New visitors</div>
+        <div class="period">Last week</div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="sub-card">
+        <div class="cardName">Activity</div>
+        <div class="period">Last week</div>
+        <div class="numbers">
+          <div>82%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="right-row">
+    <div class="card">
+      <div class="cardName">New visitors</div>
+      <div class="period">Last week</div>
+      <div class="numbers">
+        <div>23%</div>
+        <div>
+          <mat-icon
+            class="icon"
+            aria-label="Example home icon"
+            fontIcon="arrow_downward"
+          >
+          </mat-icon>
+          8.75%
+        </div>
+      </div>
+      <div class="chart"></div>
+    </div>
+  </div>
+</div> -->
+
+<div class="stats-container">
+  <div class="left-row">
+    <div class="small-column card">
+      <div class="small-box">
+        <div class="sub-box">
+          <div class="cardName">New visitors</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="line_chart" width="400px" height="200px"></canvas>
+        </div>
+      </div>
+      <div class="small-box">
+        <div class="sub-box">
+          <div class="cardName">Activity</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="medium-column card">
+      <div class="medium-box">
+        <div class="sub-box">
+          <div class="cardName">Total income</div>
+          <div class="period">Yearly report overview</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="medium-box">
+        <div class="sub-box">
+          <div class="cardName">Total income</div>
+          <div class="period">Yearly report overview</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="small-column card">
+      <div class="small-box">
+        <div class="sub-box">
+          <div class="cardName">bottom left box</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- right row -->
+
+  <div class="right-row">
+    <div class="large-column card">
+      <div class="sub-box">
+        <div class="cardName">top right box</div>
+        <div class="period">Last week</div>
+      </div>
+      <div class="numbers">
+        <div>23%</div>
+        <div>
+          <mat-icon
+            class="icon"
+            aria-label="Example home icon"
+            fontIcon="arrow_downward"
+          >
+          </mat-icon>
+          8.75%
+        </div>
+      </div>
+      <div class="chart"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="sub-box">
+          <div class="cardName">bottom right</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="cardName">bottom right</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="cardName">bottom right</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="cardName">bottom right</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="numbers">
+          <div>23%</div>
+          <div>
+            <mat-icon
+              class="icon"
+              aria-label="Example home icon"
+              fontIcon="arrow_downward"
+            >
+            </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+  </div>
+</div>
