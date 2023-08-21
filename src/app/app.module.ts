@@ -11,12 +11,12 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { ComponentsModule } from "./components/components.module";
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './pages/login/login.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { StatsComponent } from './pages/stats/stats.component';
 import { RequestsComponent } from './pages/requests/requests.component';
 import { SalesComponent } from './pages/sales/sales.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [
@@ -41,6 +41,7 @@ import { SalesComponent } from './pages/sales/sales.component';
         MatIconModule,
         ComponentsModule,
         BrowserModule,
+        NgChartsModule
     ]
 })
 export class AppModule { }
