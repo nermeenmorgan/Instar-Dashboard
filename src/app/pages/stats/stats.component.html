@@ -1,64 +1,6 @@
-<!-- <div class="cardBox">
-  <div class="left-row">
-    <div class="card">
-      <div class="sub-card">
-        <div class="cardName">New visitors</div>
-        <div class="period">Last week</div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
-        </div>
-        <div class="chart"></div>
-      </div>
-      <div class="sub-card">
-        <div class="cardName">Activity</div>
-        <div class="period">Last week</div>
-        <div class="numbers">
-          <div>82%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
-        </div>
-        <div class="chart"></div>
-      </div>
-    </div>
-  </div>
-  <div class="right-row">
-    <div class="card">
-      <div class="cardName">New visitors</div>
-      <div class="period">Last week</div>
-      <div class="numbers">
-        <div>23%</div>
-        <div>
-          <mat-icon
-            class="icon"
-            aria-label="Example home icon"
-            fontIcon="arrow_downward"
-          >
-          </mat-icon>
-          8.75%
-        </div>
-      </div>
-      <div class="chart"></div>
-    </div>
-  </div>
-</div> -->
-
 <div class="stats-container">
+  <!-- left row -->
+
   <div class="left-row">
     <div class="small-column card">
       <div class="small-box">
@@ -66,20 +8,17 @@
           <div class="cardName">New visitors</div>
           <div class="period">Last week</div>
         </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
+        <div class="sub-box">
+          <div class="numbers">
+            <div class="percentage">23%</div>
+            <div class="up-down-perc">
+              <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+              8.75%
+            </div>
           </div>
-        </div>
-        <div class="chart">
-          <canvas id="line_chart" width="400px" height="200px"></canvas>
+          <div class="visitors-Chart">
+            <canvas id="visitorsChart"></canvas>
+          </div>
         </div>
       </div>
       <div class="small-box">
@@ -87,80 +26,108 @@
           <div class="cardName">Activity</div>
           <div class="period">Last week</div>
         </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
+        <div class="sub-box">
+          <div class="numbers">
+            <div class="percentage">23%</div>
+            <div class="up-down-perc">
+              <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+              8.75%
+            </div>
+          </div>
+          <div class="activity-Chart">
+            <canvas id="activityChart"></canvas>
           </div>
         </div>
-        <div class="chart"></div>
       </div>
     </div>
+
+    <!-- total income -->
+
     <div class="medium-column card">
       <div class="medium-box">
         <div class="sub-box">
-          <div class="cardName">Total income</div>
-          <div class="period">Yearly report overview</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
+          <div class="title-box">
+            <div class="cardName">Total Income</div>
+            <div class="period">Yearly report overview</div>
+          </div>
+          <div class="more-button">
+            <mat-icon class="icon" fontIcon="more_vert"> </mat-icon>
           </div>
         </div>
-        <div class="chart"></div>
+        <div class="yearly-income-chart">
+          <canvas id="yearlyIncomeChart"></canvas>
+        </div>
       </div>
       <div class="medium-box">
         <div class="sub-box">
-          <div class="cardName">Total income</div>
-          <div class="period">Yearly report overview</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
+          <div class="title-box">
+            <div class="cardName">Total Income</div>
+            <div class="period">Yearly report overview</div>
+          </div>
+          <div class="more-button">
+            <mat-icon class="icon" fontIcon="more_vert"> </mat-icon>
           </div>
         </div>
-        <div class="chart"></div>
+        <div class="card-list">
+          <div class="card">
+            <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+            <div class="income">
+              <div class="title">Income</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">+2.34k</div>
+          </div>
+          <div class="card">
+            <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+            <div class="income">
+              <div class="title">Expence</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">-1.34k</div>
+          </div>
+          <div class="card">
+            <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+            <div class="income">
+              <div class="title">Profit</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">+2.34k</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="small-column card">
-      <div class="small-box">
-        <div class="sub-box">
-          <div class="cardName">bottom left box</div>
-          <div class="period">Last week</div>
+
+    <!-- transactions -->
+
+    <div class="transactions card">
+      <div class="sub-box">
+        <div class="cardName">Transactions</div>
+        <div class="more-button">
+          <mat-icon class="icon" fontIcon="more_vert"> </mat-icon>
         </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
+      </div>
+      <div class="card-list transactions-list">
+        <div class="card">
+          <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+          <div class="income">
+            <div class="title">Income</div>
+            <div class="num">$42.845</div>
           </div>
         </div>
-        <div class="chart"></div>
+        <div class="card">
+          <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+          <div class="income">
+            <div class="title">Expence</div>
+            <div class="num">$42.845</div>
+          </div>
+        </div>
+        <div class="card">
+          <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+          <div class="income">
+            <div class="title">Profit</div>
+            <div class="num">$42.845</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -168,99 +135,91 @@
   <!-- right row -->
 
   <div class="right-row">
-    <div class="large-column card">
+    <!-- conversion -->
+
+    <div class="conversion card">
       <div class="sub-box">
-        <div class="cardName">top right box</div>
-        <div class="period">Last week</div>
-      </div>
-      <div class="numbers">
-        <div>23%</div>
-        <div>
-          <mat-icon
-            class="icon"
-            aria-label="Example home icon"
-            fontIcon="arrow_downward"
-          >
-          </mat-icon>
-          8.75%
+        <div class="title-box">
+          <div class="cardName">Converstion Rate</div>
+          <div class="period">Compared to last month</div>
+        </div>
+        <div class="more-button">
+          <mat-icon class="icon" fontIcon="more_vert"> </mat-icon>
         </div>
       </div>
-      <div class="chart"></div>
+      <div class="sub-box perc">
+        <div class="numbers">
+          <div class="percentage">23%</div>
+          <div class="up-down-perc">
+            <mat-icon class="icon" fontIcon="arrow_upward"> </mat-icon>
+            8.75%
+          </div>
+        </div>
+        <div class="conversion-Chart">
+          <canvas id="conversionChart"></canvas>
+        </div>
+      </div>
+      <div class="card-list conversion-list">
+        <div class="card">
+          <div class="income">
+            <div class="title">Income</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">
+            <mat-icon class="conv-icon" fontIcon="arrow_upward"> </mat-icon>
+            +2.34k
+          </div>
+        </div>
+        <div class="card">
+          <div class="income">
+            <div class="title">Expence</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">
+            <mat-icon class="conv-icon" fontIcon="arrow_upward"> </mat-icon>
+            +2.34k
+          </div>
+        </div>
+        <div class="card">
+          <div class="income">
+            <div class="title">Profit</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">
+            <mat-icon class="conv-icon" fontIcon="arrow_upward"> </mat-icon>
+            +2.34k
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- cards grid -->
+
     <div class="cards-grid">
       <div class="card">
         <div class="sub-box">
-          <div class="cardName">bottom right</div>
-          <div class="period">Last week</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
+          <div class="period">Revenue</div>
+          <div class="cardName">$42.57</div>
         </div>
         <div class="chart"></div>
       </div>
       <div class="card">
         <div class="sub-box">
-          <div class="cardName">bottom right</div>
-          <div class="period">Last week</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
+          <div class="period">Sales</div>
+          <div class="cardName">482k</div>
         </div>
         <div class="chart"></div>
       </div>
       <div class="card">
         <div class="sub-box">
-          <div class="cardName">bottom right</div>
-          <div class="period">Last week</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
+          <div class="period">Delivered Models</div>
         </div>
         <div class="chart"></div>
       </div>
       <div class="card">
         <div class="sub-box">
-          <div class="cardName">bottom right</div>
-          <div class="period">Last week</div>
-        </div>
-        <div class="numbers">
-          <div>23%</div>
-          <div>
-            <mat-icon
-              class="icon"
-              aria-label="Example home icon"
-              fontIcon="arrow_downward"
-            >
-            </mat-icon>
-            8.75%
-          </div>
+          <div class="period">Requests</div>
+          <div class="cardName"></div>
         </div>
         <div class="chart"></div>
       </div>
