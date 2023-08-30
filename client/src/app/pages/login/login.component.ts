@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username = '';
   password = '';
-  loginError = ''; 
+  loginError = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
+    console.log(this.username)
     this.authService.login(this.username, this.password).subscribe(
       () => {
         // Login success, redirection handled in the service
@@ -22,8 +23,7 @@ export class LoginComponent {
       },
       error => {
         // Handle login error, show error message to user
-        console.error(error);
-        this.loginError = 'Invalid credentials. Please try again.'; // Set your error message
+        this.loginError = error.error.message;
       }
     );
   }

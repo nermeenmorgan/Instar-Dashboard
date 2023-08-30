@@ -19,12 +19,13 @@ export class AuthService {
 
   login(username: string, password: string): Observable<any> {
     const loginData = { username, password };
+    console.log(username)
     return this.http.post(`${this.apiUrl}/login`, loginData).pipe(
       tap((response: any) => {
         // Save token to local storage
         localStorage.setItem(this.tokenKey, response.token);
         // Redirect to some dashboard or protected route
-        this.router.navigate(['/dashboard']);
+        //this.router.navigate(['/dashboard']);
       }),
       catchError(error => {
         return throwError(error);
