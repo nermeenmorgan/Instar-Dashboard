@@ -278,18 +278,10 @@ content: '';
 
 .list{
     position: relative;
+    display: grid;
     width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
     margin-top: 10px;
-}
-
-.list .details{
-    position: relative;
-    display: grid;
-    min-height: 550px;
+    min-height: 450px;
     background: var(--white-2);
     padding: 20px;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
@@ -297,10 +289,10 @@ content: '';
 }
 .list .table-header{
     position: relative;
-    /* width: 60%; */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    height: 50px;
 }
 
 .list .table-header .item-count{
@@ -332,30 +324,30 @@ content: '';
     left: 85%;
 }
 
-.details table{
+.list table{
     width:100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-.details table thead td {
+.list table thead td {
     font-weight: 600;
 }
-.details table tbody tr{
+.list table tbody tr{
     color: var(--black);
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     margin-bottom: 10px;
 }
-.details table tbody tr:hover{
+.list table tbody tr:hover{
     background: var(--white-bg);
 }
-.details table tbody tr td,
-.details table thead tr td{
+.list table tbody tr td,
+.list table thead tr td{
     padding: 10px;
     text-align: center;
 }
-.details table tbody tr td{
+.list table tbody tr td{
     margin-top: 10px;
 }
 
