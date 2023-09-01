@@ -24,9 +24,9 @@ const register = async (req, res, next) => {
         });
 
         await user.save();
-        res.json({ message: 'User added successfully' });
+         res.status(200).json({ message: 'User added successfully' });
     } catch (error) {
-        res.json({ message: 'Error occurred' });
+        res.status(500).json({ message: 'Error occurred' });
     }
 };
 
@@ -57,16 +57,12 @@ const login = (req, res, next) => {
                         tokenExpiration: moment(expirationDate).format('DD/MM/YYYY H:mm:ss')
                     });
                 } else {
-                    res.json({
-                        message: 'password does not match!'
-                    });
+                    res.status(500).json({ message: 'password does not match' });
                 }
             });
 
         } else {
-            res.json({
-                message: 'no user found'
-            });
+            res.status(500).json({ message: 'User not found' });
         }
     });
 };

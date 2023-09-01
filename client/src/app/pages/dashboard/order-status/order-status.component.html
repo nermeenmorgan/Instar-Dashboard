@@ -1,0 +1,132 @@
+<div
+  style="
+    width: 28rem;
+    height: 18rem;
+    background-color: #35363d;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+  "
+>
+  <!-- Option select -->
+  <mat-form-field
+    style="
+      margin-top: 5%;
+      margin-left: 7%;
+      background-color: black;
+      border-radius: 22px;
+    "
+  >
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selectedOption">
+      <mat-option value="option1">Weekly</mat-option>
+      <mat-option value="option2">Monthly</mat-option>
+      <mat-option value="option3">Daily</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Chart container -->
+  <div class="chart-container">
+    <!-- Y-axis -->
+    <div class="y-axis">
+      <span>100%</span>
+      <span>75%</span>
+      <span>50%</span>
+      <span>25%</span>
+      <span>0%</span>
+    </div>
+
+    <!-- Progress bars -->
+    <!-- <div class="progress-bars">
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.height.%]="value1"></div>
+          <span class="progress-label">{{ value1 }}%</span>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.height.%]="value2"></div>
+          <span class="progress-label">{{ value2 }}%</span>
+        </div>
+      </div> -->
+  </div>
+
+  <!-- X-axis -->
+  <div class="x-axis">
+    <span>Del</span>
+    <span>Conf</span>
+    <span>Ret</span>
+    <span>Can</span>
+    <span>Rec</span>
+  </div>
+</div>
+
+<style>
+  /* Progress bars */
+  .progress-bar {
+    width: 2rem;
+    background-color: #00bfff;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+  }
+
+  /* X-axis */
+  .x-axis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #edf5ff;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 1.2rem;
+  }
+
+  /* Y-axis */
+  .y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-right: 1rem;
+    font-size: 0.875rem;
+    color: #edf5ff;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  /* Progress bar container */
+  .progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 75%;
+  }
+
+  /* Progress label */
+  .progress-label {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #edf5ff;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  /* Chart container */
+  .chart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 75%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+</style>

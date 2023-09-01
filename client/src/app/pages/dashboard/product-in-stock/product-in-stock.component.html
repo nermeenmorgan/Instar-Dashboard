@@ -1,0 +1,95 @@
+<!-- circle-progress.component.html -->
+
+<div
+  style="
+    width: 11rem;
+    height: 18rem;
+    margin-left: 6%;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    background: #242529;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  "
+>
+  <!-- <div style="display: flex; "></div> -->
+  <div>
+    <span
+      style="
+        color: #edf5ff;
+        font-family: Poppins;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        margin-left: 60px;
+      "
+      >...</span
+    >
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center">
+    <span
+      style="
+        color: #edf5ff;
+        font-family: Montserrat;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 10px; /* Add some space between the dots and the text */
+        text-align: center;
+      "
+      >Product In Stock</span
+    >
+
+    <div class="circle-container" style="margin-top: 10px">
+      <!-- Add some space between the text and the progress circle -->
+      <mat-progress-spinner
+        class="progress-spinner"
+        mode="determinate"
+        [value]="percentage"
+      ></mat-progress-spinner>
+      <div class="center-content">
+        <!-- Add your SVG here -->
+        <svg
+          class="center-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 60 60"
+          fill="none"
+        >
+          <path
+            d="M58.4397 36.0508C62.0082 20.1358 51.9909 4.3433 36.0655 0.777134C20.14 -2.78903 4.33702 7.22164 0.768502 23.1366C-2.80002 39.0515 7.21726 54.8441 23.1427 58.4102C39.0682 61.9764 54.8711 51.9657 58.4397 36.0508Z"
+            fill="#F5E8FF"
+            fill-opacity="0.933333"
+          />
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="#000"
+            font-size="12"
+          >
+            {{ percentage }}%
+          </text>
+        </svg>
+      </div>
+    </div>
+    <span
+      style="
+        color: #edf5ff;
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 10px; /* Add some space between the progress circle and the text */
+        text-align: center;
+      "
+      >32/48 available Products</span
+    >
+  </div>
+</div>

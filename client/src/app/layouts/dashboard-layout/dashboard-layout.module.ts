@@ -6,6 +6,7 @@ import { DashboardLayoutRoutes } from './dashboard-layout.routing';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
+    ComponentsModule
   ],
     declarations: [
     DashboardComponent,

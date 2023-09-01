@@ -1,21 +1,45 @@
+import { WelcomeComponent } from './../pages/dashboard/welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { TopbarComponent } from './topbar/topbar.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { TotalIncomeComponent } from '../pages/dashboard/total-income/total-income.component';
+import { OrderStatusComponent } from '../pages/dashboard/order-status/order-status.component';
+import { ProductInStockComponent } from '../pages/dashboard/product-in-stock/product-in-stock.component';
+import { TasksCalendarComponent } from '../pages/dashboard/tasks-calendar/tasks-calendar.component';
+import { CustomerReviewsComponent } from '../pages/dashboard/customer-reviews/customer-reviews.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    TasksCalendarComponent,
+    ProductInStockComponent,
+
+
   ],
   declarations: [
+    WelcomeComponent,
+    TotalIncomeComponent,
+    OrderStatusComponent,
+    CustomerReviewsComponent,
     TopbarComponent,
     SidebarComponent
   ],
   exports: [
+    WelcomeComponent,
+    TotalIncomeComponent,
+    TasksCalendarComponent,
+    ProductInStockComponent,
+    OrderStatusComponent,
+    CustomerReviewsComponent,
     TopbarComponent,
     SidebarComponent
   ]

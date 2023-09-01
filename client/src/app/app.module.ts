@@ -17,6 +17,7 @@ import { StatsComponent } from './pages/stats/stats.component';
 import { RequestsComponent } from './pages/requests/requests.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { NgChartsModule } from 'ng2-charts';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,8 @@ import { NgChartsModule } from 'ng2-charts';
         StatsComponent,
         RequestsComponent,
         SalesComponent,
+        UserProfileComponent
+        
     ],
     providers: [],
     bootstrap: [AppComponent],

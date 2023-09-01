@@ -15,7 +15,6 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
-    console.log(this.username)
     this.authService.login(this.username, this.password).subscribe(
       () => {
         // Login success, redirection handled in the service

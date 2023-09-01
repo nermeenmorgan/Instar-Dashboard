@@ -1,0 +1,241 @@
+<div
+  style="
+    width: 19.9375rem;
+    height: 22rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    background: #35363d;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    overflow-y: auto; /* Enable vertical scroll */
+    scrollbar-color: grey; /* Set scrollbar color to grey */
+    scrollbar-width: thin; /* Set scrollbar width to thin */
+  "
+>
+  <div
+    style="
+      width: 18.9375rem;
+      height: 9rem;
+      flex-shrink: 0;
+      margin-top: 3%;
+      margin-left: 3%;
+      margin-bottom: 3%;
+
+      border-radius: 1.25rem;
+      background: #242529;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <mat-form-field style="background-color: transparent !important">
+      <mat-label>Choose a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="dp"
+        [formControl]="date"
+        style="background-color: transparent !important"
+      />
+      <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+      <mat-datepicker #dp></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div style="display: flex; flex-direction: column">
+    <span
+      style="
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 4%;
+        padding: 3%;
+      "
+      >Tasks</span
+    >
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+      "
+    >
+      <span
+        style="
+          width: 2.75rem;
+          height: 1.625rem;
+          flex-shrink: 0;
+          color: #c6c4c4;
+          font-family: Montserrat;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        "
+        >9:00</span
+      >
+      <div
+        style="
+          width: 14.5rem;
+          height: 0.125rem;
+          flex-shrink: 0;
+          border-radius: 3.125rem;
+          background: #919191;
+        "
+      ></div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+      "
+    >
+      <span
+        style="
+          width: 3.6875rem;
+          height: 1.625rem;
+          flex-shrink: 0;
+          color: #c6c4c4;
+          font-family: Montserrat;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        "
+        >10:00</span
+      >
+      <div
+        style="
+          width: 14.4375rem;
+          height: 2.6875rem;
+          flex-shrink: 0;
+          border-radius: 0rem 0.625rem 0.625rem 0rem;
+          border: 0.75px solid #919191;
+        "
+      >
+        <div style="display: flex; flex-direction: column">
+          <span
+            style="
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 0.625rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            "
+          >
+            Confirm the orders</span
+          >
+          <span
+            style="
+              color: #919191;
+              font-family: Montserrat;
+              font-size: 0.625rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            "
+          >
+            10PM-11PM
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+      "
+    >
+      <span
+        style="
+          width: 2.75rem;
+          height: 1.625rem;
+          flex-shrink: 0;
+          color: #c6c4c4;
+          font-family: Montserrat;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        "
+        >9:00</span
+      >
+      <div
+        style="
+          width: 14.5rem;
+          height: 0.125rem;
+          flex-shrink: 0;
+          border-radius: 3.125rem;
+          background: #919191;
+        "
+      ></div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+      "
+    >
+      <span
+        style="
+          width: 3.6875rem;
+          height: 1.625rem;
+          flex-shrink: 0;
+          color: #c6c4c4;
+          font-family: Montserrat;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        "
+        >10:00</span
+      >
+      <div
+        style="
+          width: 14.4375rem;
+          height: 2.6875rem;
+          flex-shrink: 0;
+          border-radius: 0rem 0.625rem 0.625rem 0rem;
+          border: 0.75px solid #919191;
+        "
+      >
+        <div style="display: flex; flex-direction: column">
+          <span
+            style="
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 0.625rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            "
+          >
+            Confirm the orders</span
+          >
+          <span
+            style="
+              color: #919191;
+              font-family: Montserrat;
+              font-size: 0.625rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            "
+          >
+            10PM-11PM
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

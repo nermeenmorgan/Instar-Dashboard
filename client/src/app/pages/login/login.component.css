@@ -43,3 +43,32 @@
   color: #ff0000;
   margin-top: 10px;
 }
+
+/* extra css */
+
+form .signup-link {
+  color: #262626;
+  margin-top: 40px;
+  text-align: center;
+}
+
+form .pass-link a,
+form .signup-link a {
+  color: #4158d0;
+  text-decoration: none;
+}
+
+form .pass-link a:hover,
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* error messages */
+.field .error-message {
+  position: absolute;
+  bottom: -20px;
+  /* Adjust this value to control the spacing between field and error message */
+  left: 0;
+  color: red;
+  font-size: 14px;
+}

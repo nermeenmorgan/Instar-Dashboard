@@ -1,114 +1,116 @@
-<div class="container">
-  <div class="title">Registration</div>
-  <div class="register-content">
-    <form [formGroup]="registerform" (ngSubmit)="register()">
-      <div class="user-details">
-        <div class="input-box form-group">
-          <label class="details">First Name</label>
-          <input
-            type="text"
-            formControlName="Firstname"
-            placeholder="Enter your first name"
-            minlength="3"
-            maxlength="20"
-            required
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              registerform.get('Firstname')?.invalid &&
-              registerform.get('Firstname')?.touched
-            "
-          >
-            First Name must be between 3 and 20 characters.
+<div class="register-container">
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="register-content">
+      <form [formGroup]="registerform" (ngSubmit)="register()">
+        <div class="user-details">
+          <div class="input-box form-group">
+            <label class="details">First Name</label>
+            <input
+              type="text"
+              formControlName="Firstname"
+              placeholder="Enter your first name"
+              minlength="3"
+              maxlength="20"
+              required
+            />
+            <div
+              class="error-message"
+              *ngIf="
+                registerform.get('Firstname')?.invalid &&
+                registerform.get('Firstname')?.touched
+              "
+            >
+              First Name must be between 3 and 20 characters.
+            </div>
           </div>
-        </div>
-        <div class="input-box form-group">
-          <label class="details">Last Name</label>
-          <input
-            type="text"
-            formControlName="Lastname"
-            placeholder="Enter your last name"
-            minlength="3"
-            maxlength="20"
-            required
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              registerform.get('Lastname')?.invalid &&
-              registerform.get('Lastname')?.touched
-            "
-          >
-            Last Name must be between 3 and 20 characters.
+          <div class="input-box form-group">
+            <label class="details">Last Name</label>
+            <input
+              type="text"
+              formControlName="Lastname"
+              placeholder="Enter your last name"
+              minlength="3"
+              maxlength="20"
+              required
+            />
+            <div
+              class="error-message"
+              *ngIf="
+                registerform.get('Lastname')?.invalid &&
+                registerform.get('Lastname')?.touched
+              "
+            >
+              Last Name must be between 3 and 20 characters.
+            </div>
           </div>
-        </div>
 
-        <div class="input-box form-group">
-          <label class="details">Email</label>
-          <input
-            type="email"
-            formControlName="email"
-            placeholder="Enter your email"
-            required
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              registerform.get('email')?.invalid &&
-              registerform.get('email')?.touched
-            "
-          >
-            Please enter a valid email.
+          <div class="input-box form-group">
+            <label class="details">Email</label>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div
+              class="error-message"
+              *ngIf="
+                registerform.get('email')?.invalid &&
+                registerform.get('email')?.touched
+              "
+            >
+              Please enter a valid email.
+            </div>
+          </div>
+          <div class="input-box form-group">
+            <label class="details">Phone Number</label>
+            <input
+              type="number"
+              formControlName="phone"
+              placeholder="Enter your number"
+              required
+            />
+            <div
+              class="error-message"
+              *ngIf="
+                registerform.get('phone')?.invalid &&
+                registerform.get('phone')?.touched
+              "
+            >
+              Phone Number is required.
+            </div>
+          </div>
+          <div class="input-box form-group">
+            <label class="details">Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Enter your password"
+              required
+            />
+            <div
+              class="error-message"
+              *ngIf="
+                registerform.get('password')?.invalid &&
+                registerform.get('password')?.touched
+              "
+            >
+              Password is required.
+            </div>
           </div>
         </div>
-        <div class="input-box form-group">
-          <label class="details">Phone Number</label>
+        <div class="button">
           <input
-            type="number"
-            formControlName="phone"
-            placeholder="Enter your number"
-            required
+            type="submit"
+            value="Register"
+            [disabled]="registerform.invalid"
           />
-          <div
-            class="error-message"
-            *ngIf="
-              registerform.get('phone')?.invalid &&
-              registerform.get('phone')?.touched
-            "
-          >
-            Phone Number is required.
-          </div>
         </div>
-        <div class="input-box form-group">
-          <label class="details">Password</label>
-          <input
-            type="password"
-            formControlName="password"
-            placeholder="Enter your password"
-            required
-          />
-          <div
-            class="error-message"
-            *ngIf="
-              registerform.get('password')?.invalid &&
-              registerform.get('password')?.touched
-            "
-          >
-            Password is required.
-          </div>
+        <div class="signup-link">
+          Already a member? <a routerLink="/login">Login now</a>
         </div>
-      </div>
-      <div class="button">
-        <input
-          type="submit"
-          value="Register"
-          [disabled]="registerform.invalid"
-        />
-      </div>
-      <div class="signup-link">
-        Already a member? <a routerLink="/login">Login now</a>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>
