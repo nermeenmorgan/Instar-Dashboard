@@ -15,8 +15,8 @@ export class StatsComponent implements OnInit {
     const conversionCtx = document.getElementById('conversionChart') as HTMLCanvasElement;
     
     const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
-     
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+ 
     const visitorsData = [5, 3, 7, 2, 6, 4, 8];
     const activityData = [5, 3, 7, 2, 6, 4, 8];
     const yearlyIncomeData =

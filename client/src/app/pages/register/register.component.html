@@ -1,5 +1,5 @@
 <div class="register-container">
-  <div class="container">
+  <div class="register-card">
     <div class="title">Registration</div>
     <div class="register-content">
       <form [formGroup]="registerform" (ngSubmit)="register()">
@@ -100,6 +100,8 @@
             </div>
           </div>
         </div>
+        <div class="login-error" *ngIf="registerError">{{ registerError }}</div>
+
         <div class="button">
           <input
             type="submit"

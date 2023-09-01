@@ -13,6 +13,7 @@ export class AuthService {
 
   private apiUrl = 'http://localhost:9000/api';
   tokenKey = 'auth_token'; // Key to store token in local storage
+  
   register(user: any) {
     return this.http.post(`${this.apiUrl}/register`, user);
   }

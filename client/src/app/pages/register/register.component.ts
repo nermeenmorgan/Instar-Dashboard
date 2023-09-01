@@ -13,6 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
   registerform!: FormGroup;
   image: any;
+  registerError = '';
 
   constructor(private fb: FormBuilder, private _auth: AuthService, private router: Router) { }
 
@@ -38,8 +39,10 @@ export class RegisterComponent implements OnInit {
           this.registerform.reset(); // Reset the form
           this.router.navigate(['login']);
         },
-        (error) => {
-          alert(`Register Failed: ${error.message}`);
+        error => {
+          alert(`Register Failed: ${error.error.message}`);
+          this.registerError = error.error.message;
+
         }
       );
   }

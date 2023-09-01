@@ -18,10 +18,11 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe(
       () => {
         // Login success, redirection handled in the service
-        this.router.navigate(['/dashboard']); // Redirect to the dashboard or desired route
+        this.router.navigate(['/dashboard']);
       },
       error => {
         // Handle login error, show error message to user
+        this.password = '';
         this.loginError = error.error.message;
       }
     );
