@@ -23,7 +23,6 @@
     "@angular/router": "^16.1.0",
     "@material/form-field": "^15.0.0-canary.b994146f6.0",
     "@material/select": "^15.0.0-canary.b994146f6.0",
-    "bootstrap": "^5.3.1",
     "chart.js": "^4.4.0",
     "moment": "^2.29.4",
     "ng2-charts": "^5.0.3",

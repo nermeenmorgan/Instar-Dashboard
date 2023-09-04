@@ -1,32 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-.register-container {
+.auth-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-}
-
-* {
-    margin: 0;
+    flex-wrap: wrap;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* body {
+    margin: 0;
+    flex-direction: row;
+    width: 100vw;
     height: 100vh;
+}
+/* ======== left section ======== */
+
+.left-section {
+    background:
+        linear-gradient(150deg,
+            #203756 -0.72%,
+            #162943 32.27%,
+            #010C1B 68.18%);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-} */
+
+    height: 100vh;
+    flex: 1;
+}
+
+.left-content {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text {
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.next {
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: rgba(100, 150, 247, 0.65);
+}
+
+.title {
+    color: #FFF;
+    margin-bottom: 35px;
+    width: 50%;
+    line-height: 130%;
+}
+
+.description {
+    color: #6496F7;
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 50px;
+}
+
+.dots {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo {
+    width: 120px;
+    height: 100%;
+    margin-top: 1rem;
+    /* margin-bottom: -150px; */
+}
+
+/* ======== right section ======== */
+
+.register-section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    text-align: center;
+    flex: 0.5;
+}
 
 .register-card {
     flex-direction: column;
-    max-width: 700px;
+    /* max-width: 700px; */
     width: 100%;
     background-color: #fff;
     padding-left: 5px;
@@ -49,17 +112,6 @@
     align-items: center;
     flex-direction: column;
 }
-
-/* .container .title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    border-radius: 5px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-} */
 
 .register-content form .user-details {
     display: flex;
@@ -191,4 +243,16 @@ form .button input:hover {
 
 .error-message{
     color: rgb(216, 36, 36);
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+    .auth-container {
+        width: auto;
+    }
+  .register-section {
+    
+    width: auto;
+    flex: 1;
+    height: auto;
+  }
 }

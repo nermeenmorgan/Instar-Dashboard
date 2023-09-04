@@ -2,7 +2,7 @@
   <ul>
     <li>
       <span class="logo">
-        <img src="../../assets/img/logo-white.png" alt="logo instar" />
+        <img src="../../../assets/img/logo-white.png" alt="logo instar" />
       </span>
     </li>
     <li>
@@ -79,3 +79,28 @@
     </li>
   </ul>
 </div>
+<script>
+  // add hovered class to selected list item
+  let list = document.querySelectorAll(".navigation li");
+
+  function activeLink() {
+    list.forEach((item) => {
+      item.classList.remove("hovered");
+    });
+    this.classList.add("hovered");
+  }
+
+  list.forEach((item) => item.addEventListener("mouseover", activeLink));
+
+  //menu toggle
+
+  let toggle = document.querySelector(".toggle");
+  let navigation = document.querySelector(".navigation");
+  let main = document.querySelector(".main");
+
+  menuToggle.onclick = function () {
+    toggle.classList.toggle("active");
+    navigation.classList.toggle("active");
+    main.classList.toggle("active");
+  };
+</script>

@@ -12,6 +12,7 @@ import { OrderStatusComponent } from '../pages/dashboard/order-status/order-stat
 import { ProductInStockComponent } from '../pages/dashboard/product-in-stock/product-in-stock.component';
 import { TasksCalendarComponent } from '../pages/dashboard/tasks-calendar/tasks-calendar.component';
 import { CustomerReviewsComponent } from '../pages/dashboard/customer-reviews/customer-reviews.component';
+import { AuthIllustrationComponent } from './auth-illustration/auth-illustration.component';
 
 @NgModule({
   imports: [
@@ -26,14 +27,17 @@ import { CustomerReviewsComponent } from '../pages/dashboard/customer-reviews/cu
 
   ],
   declarations: [
+    AuthIllustrationComponent,
     WelcomeComponent,
     TotalIncomeComponent,
     OrderStatusComponent,
     CustomerReviewsComponent,
     TopbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    AuthIllustrationComponent
   ],
   exports: [
+    AuthIllustrationComponent,
     WelcomeComponent,
     TotalIncomeComponent,
     TasksCalendarComponent,

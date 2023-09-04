@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { DashboardLayoutComponent } from './layouts/admin-layout/dashboard-layout.component';
 import { ComponentsModule } from "./components/components.module";
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CommonModule } from '@angular/common';
@@ -18,6 +18,7 @@ import { RequestsComponent } from './pages/requests/requests.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { NgChartsModule } from 'ng2-charts';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { ProviderLayoutComponent } from './layouts/provider-layout/provider-layout.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
         StatsComponent,
         RequestsComponent,
         SalesComponent,
-        UserProfileComponent
+        UserProfileComponent,
+        ProviderLayoutComponent
         
     ],
     providers: [],
