@@ -97,6 +97,15 @@
   margin-bottom: 70px;
 }
 
+.form-control:focus {
+  outline: none;
+  border: 1px solid #6496F7;
+  border-bottom: 2px solid #6496F7;
+  border-right: 2px solid #6496F7;
+  
+  border-radius: 6px;
+}
+
 .bs{
   display: flex;
   flex-direction: row;
@@ -261,7 +270,7 @@
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1920px) {
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
   .auth-container {
     width: auto;
   }
@@ -273,17 +282,18 @@
   }
 
   .login-card {
-    padding: 60px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    padding: 50px;
+    padding-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .status-bar {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .form-control {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
   }
 
@@ -299,10 +309,10 @@
   }
 
   .sign-up {
-    height: 90%;
+    height: 100%;
   }
 
   .btn-google {
-    width: 60%;
+    width: 50%;
   }
 }
