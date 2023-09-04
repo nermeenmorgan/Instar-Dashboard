@@ -1,12 +1,15 @@
 <div class="topbar">
-  <!-- <div class="toggle">
-        <mat-icon
-          class="icon"
-          aria-label="Example home icon"
-          fontIcon="menu"
-        ></mat-icon>
-      </div> -->
-  <div class="page-title">Dashboard</div>
+  <div class="s">
+    <!-- <div class="toggle">
+      <mat-icon
+        class="icon"
+        aria-label="Example home icon"
+        fontIcon="menu"
+      ></mat-icon>
+    </div> -->
+    <div class="page-title">Dashboard</div>
+  </div>
+
   <div class="search">
     <label>
       <input type="text" placeholder="Search" />
@@ -31,3 +34,29 @@
     </div>
   </div>
 </div>
+
+<script>
+  // add hovered class to selected list item
+  let list = document.querySelectorAll(".navigation li");
+
+  function activeLink() {
+    list.forEach((item) => {
+      item.classList.remove("hovered");
+    });
+    this.classList.add("hovered");
+  }
+
+  list.forEach((item) => item.addEventListener("mouseover", activeLink));
+
+  //menu toggle
+
+  let toggle = document.querySelector(".toggle");
+  let navigation = document.querySelector(".navigation");
+  let main = document.querySelector(".main");
+
+  menuToggle.onclick = function () {
+    toggle.classList.toggle("active");
+    navigation.classList.toggle("active");
+    main.classList.toggle("active");
+  };
+</script>

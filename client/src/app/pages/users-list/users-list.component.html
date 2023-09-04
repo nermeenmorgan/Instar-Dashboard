@@ -36,8 +36,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users" (click)="navigateToUserProfile(user._id)">
-        <td>{{ user.Firstname }} {{ user.Lastname }}</td>
+      <tr *ngFor="let user of users">
+        <td (click)="navigateToUserProfile(user._id)">
+          {{ user.Firstname }} {{ user.Lastname }}
+        </td>
         <td>{{ user.email }}</td>
         <td>{{ user.phone }}</td>
         <td class="action-buttons">

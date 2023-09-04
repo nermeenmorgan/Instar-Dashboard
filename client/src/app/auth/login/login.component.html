@@ -1,0 +1,152 @@
+<div class="auth-container">
+  <div class="left-section">
+    <div class="left-content">
+      <div class="next text">Next</div>
+      <div class="title text">Revolution in Sales</div>
+      <div class="description text">
+        <div>Augmented reality</div>
+        <div>Online payment</div>
+        <div>Order tracking</div>
+      </div>
+      <div class="bottom">
+        <div class="dots">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="133"
+            height="132"
+            viewBox="0 0 133 132"
+            fill="none"
+          >
+            <circle
+              cx="65.0717"
+              cy="18.1121"
+              r="7.5"
+              transform="rotate(43.0682 65.0717 18.1121)"
+              fill="#44566E"
+            />
+            <circle
+              cx="97.4706"
+              cy="97.6754"
+              r="7.5"
+              transform="rotate(43.0682 97.4706 97.6754)"
+              fill="white"
+            />
+            <circle
+              cx="60.8242"
+              cy="59.9984"
+              r="6"
+              transform="rotate(43.0682 60.8242 59.9984)"
+              fill="#23F800"
+            />
+            <circle
+              cx="10.6006"
+              cy="60.2774"
+              r="7.5"
+              transform="rotate(43.0682 10.6006 60.2774)"
+              fill="#0057FF"
+            />
+          </svg>
+        </div>
+        <img
+          class="logo"
+          src="../../../assets/img/logo-white-horizontal-s.png"
+          alt="logo instar"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="login-section">
+    <div class="login-card">
+      <div class="login-title text">
+        <p>Welcome to</p>
+        <p class="d">InDar</p>
+      </div>
+      <p class="login-desc text">
+        We provide a user-friendly platform that empowers everyone to optimize
+        their augmented reality experience
+      </p>
+      <div class="status-bar">
+        <div class="l1" [ngClass]="{ b: isEmailFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+      </div>
+      <form (ngSubmit)="login()" class="login-form">
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="checkEmailField()"
+            placeholder="Username or Email"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+
+        <label class="label">Password</label>
+        <div class="form-group">
+          <input
+            type="password"
+            [(ngModel)]="password"
+            (ngModelChange)="checkPasswordField()"
+            placeholder="Password"
+            class="form-control"
+            name="password"
+          />
+        </div>
+        <div class="bs">
+          <button type="submit" class="btn-primary">Login</button>
+          <div class="forget-password">
+            <a routerLink="/forget-password">Forgot your Password?</a>
+          </div>
+        </div>
+      </form>
+      <div class="login-error" *ngIf="loginError">{{ loginError }}</div>
+    </div>
+
+    <div class="sign-up">
+      <button type="submit" class="btn-primary btn-google">
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="23"
+            viewBox="0 0 22 23"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_41_182)">
+              <path
+                d="M21.957 11.7152C21.957 10.7729 21.8824 10.0852 21.7209 9.37216H11.2185V13.6252H17.3831C17.2589 14.6822 16.5878 16.2739 15.0963 17.3435L15.0754 17.4859L18.396 20.1215L18.6261 20.145C20.7389 18.1458 21.957 15.2042 21.957 11.7152Z"
+                fill="#4285F4"
+              />
+              <path
+                d="M11.2185 22.921C14.2387 22.921 16.7741 21.9022 18.6261 20.145L15.0963 17.3435C14.1517 18.0184 12.8839 18.4895 11.2185 18.4895C8.26046 18.4895 5.74986 16.4904 4.8549 13.7271L4.72372 13.7386L1.27086 16.4763L1.22571 16.605C3.06515 20.3487 6.84352 22.921 11.2185 22.921Z"
+                fill="#34A853"
+              />
+              <path
+                d="M4.85492 13.7271C4.61878 13.0141 4.48212 12.25 4.48212 11.4605C4.48212 10.671 4.61878 9.90695 4.8425 9.19387L4.83625 9.04199L1.34012 6.26022L1.22573 6.31597C0.467606 7.86952 0.0325928 9.6141 0.0325928 11.4605C0.0325928 13.3069 0.467606 15.0514 1.22573 16.605L4.85492 13.7271Z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M11.2185 4.43136C13.3189 4.43136 14.7358 5.36093 15.5437 6.13775L18.7006 2.97973C16.7618 1.13332 14.2387 0 11.2185 0C6.84352 0 3.06515 2.57222 1.22571 6.31596L4.84248 9.19385C5.74986 6.43061 8.26046 4.43136 11.2185 4.43136Z"
+                fill="#EB4335"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_41_182">
+                <rect width="22" height="23" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        Sign in with google
+      </button>
+      <div class="signup-link">
+        Don't have an account? <a routerLink="/register">Register</a>
+      </div>
+    </div>
+  </div>
+</div>

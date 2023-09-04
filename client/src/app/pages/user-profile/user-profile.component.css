@@ -56,6 +56,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: stretch;
+    overflow: hidden
 }
 
 .basic-info {
@@ -90,6 +91,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+
 }
 
 .more-info {
@@ -100,6 +102,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     border-left: 5px solid var(--white-bg);
 }
 
@@ -117,6 +120,16 @@
     align-items: flex-start;
     align-self: stretch;
     justify-content: space-between;
+}
+
+.monthly-income .title,
+.right-row .title{
+    color: #242529;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .user-img{
