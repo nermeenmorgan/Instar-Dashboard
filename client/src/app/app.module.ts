@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
+
 import { DashboardLayoutComponent } from './layouts/admin-layout/dashboard-layout.component';
 import { ComponentsModule } from "./components/components.module";
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
@@ -19,6 +19,10 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { NgChartsModule } from 'ng2-charts';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { ProviderLayoutComponent } from './layouts/provider-layout/provider-layout.component';
+import { ProviderProfileComponent } from './dashboard/provider-dashboard/provider-profile/provider-profile.component';
+import { ProviderProductsComponent } from './dashboard/provider-dashboard/provider-products/provider-products.component';
+import { ProviderRequestComponent } from './dashboard/provider-dashboard/provider-request/provider-request.component';
+import { ProviderDashboardComponent } from './dashboard/provider-dashboard/provider-dashboard/provider-dashboard.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +35,11 @@ import { ProviderLayoutComponent } from './layouts/provider-layout/provider-layo
         RequestsComponent,
         SalesComponent,
         UserProfileComponent,
-        ProviderLayoutComponent
+        ProviderLayoutComponent,
+        ProviderProfileComponent,
+        ProviderProductsComponent,
+        ProviderRequestComponent,
+        ProviderDashboardComponent
         
     ],
     providers: [],
@@ -43,7 +51,6 @@ import { ProviderLayoutComponent } from './layouts/provider-layout/provider-layo
         ReactiveFormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        MatIconModule,
         ComponentsModule,
         BrowserModule,
         NgChartsModule

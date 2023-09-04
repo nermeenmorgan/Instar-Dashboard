@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { TopbarComponent } from './topbar/topbar.component';
-import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { TotalIncomeComponent } from '../pages/dashboard/total-income/total-income.component';
@@ -18,7 +17,6 @@ import { AuthIllustrationComponent } from './auth-illustration/auth-illustration
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
     TasksCalendarComponent,
