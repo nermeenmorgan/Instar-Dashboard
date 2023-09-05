@@ -1,9 +1,12 @@
 import { WelcomeComponent } from './../pages/dashboard/welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent as AdminSidebarComponent } from './admin/sidebar/sidebar.component';
+import { SidebarComponent as ProviderSidebarComponent } from './provider/sidebar/sidebar.component';
+
 import { RouterModule } from '@angular/router';
-import { TopbarComponent } from './topbar/topbar.component';
+import { TopbarComponent as AdminTopbarComponent } from './admin/topbar/topbar.component';
+import { TopbarComponent as ProviderTopbarComponent} from './provider/topbar/topbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { TotalIncomeComponent } from '../pages/dashboard/total-income/total-income.component';
@@ -21,8 +24,6 @@ import { AuthIllustrationComponent } from './auth-illustration/auth-illustration
     MatSelectModule,
     TasksCalendarComponent,
     ProductInStockComponent,
-
-
   ],
   declarations: [
     AuthIllustrationComponent,
@@ -30,8 +31,13 @@ import { AuthIllustrationComponent } from './auth-illustration/auth-illustration
     TotalIncomeComponent,
     OrderStatusComponent,
     CustomerReviewsComponent,
-    TopbarComponent,
-    SidebarComponent,
+
+    AdminTopbarComponent,
+    AdminSidebarComponent,
+
+    ProviderTopbarComponent,
+    ProviderSidebarComponent,
+
     AuthIllustrationComponent
   ],
   exports: [
@@ -42,8 +48,12 @@ import { AuthIllustrationComponent } from './auth-illustration/auth-illustration
     ProductInStockComponent,
     OrderStatusComponent,
     CustomerReviewsComponent,
-    TopbarComponent,
-    SidebarComponent
+
+    AdminTopbarComponent,
+    AdminSidebarComponent,
+
+    ProviderTopbarComponent,
+    ProviderSidebarComponent,
   ]
 })
 export class ComponentsModule { }

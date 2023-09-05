@@ -1,45 +1,55 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { DashboardLayoutComponent } from './layouts/admin-layout/dashboard-layout.component';
-import { ComponentsModule } from "./components/components.module";
-import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CommonModule } from '@angular/common';
-import { UsersListComponent } from './pages/users-list/users-list.component';
-import { ProductsListComponent } from './pages/products-list/products-list.component';
-import { StatsComponent } from './pages/stats/stats.component';
-import { RequestsComponent } from './pages/requests/requests.component';
-import { SalesComponent } from './pages/sales/sales.component';
 import { NgChartsModule } from 'ng2-charts';
-import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ProviderLayoutComponent } from './layouts/provider-layout/provider-layout.component';
-import { ProviderProfileComponent } from './dashboard/provider-dashboard/provider-profile/provider-profile.component';
-import { ProviderProductsComponent } from './dashboard/provider-dashboard/provider-products/provider-products.component';
-import { ProviderRequestComponent } from './dashboard/provider-dashboard/provider-request/provider-request.component';
-import { ProviderDashboardComponent } from './dashboard/provider-dashboard/provider-dashboard/provider-dashboard.component';
+import { ComponentsModule } from "./components/components.module";
+
+
+import { UsersListComponent } from './dashboard/admin-dashboard/users-list/users-list.component';
+import { ProductsListComponent } from './dashboard/admin-dashboard/products-list/products-list.component';
+import { StatsComponent } from './dashboard/admin-dashboard/stats/stats.component';
+import { RequestsComponent } from './dashboard/admin-dashboard/requests/requests.component';
+import { SalesComponent } from './dashboard/admin-dashboard/sales/sales.component';
+
+import { UserProfileComponent } from './dashboard/admin-dashboard/user-profile/user-profile.component';
+import { ProviderProfileComponent } from './dashboard/provider-dashboard/profile/provider-profile.component';
+import { ProviderProductsComponent } from './dashboard/provider-dashboard/products/provider-products.component';
+import { ProviderRequestsComponent } from './dashboard/provider-dashboard/requests/provider-requests.component';
+import { ProviderDashboardComponent } from './dashboard/provider-dashboard/dashboard/provider-dashboard.component';
+import { DashboardComponent } from './dashboard/admin-dashboard/dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        DashboardLayoutComponent,
+        AppComponent,        
+        AdminLayoutComponent,
+        ProviderLayoutComponent,
         AuthLayoutComponent,
+
+        // admin pages
+
         UsersListComponent,
         ProductsListComponent,
         StatsComponent,
         RequestsComponent,
         SalesComponent,
         UserProfileComponent,
-        ProviderLayoutComponent,
+
+        // provider pages
+
         ProviderProfileComponent,
         ProviderProductsComponent,
-        ProviderRequestComponent,
-        ProviderDashboardComponent
+        ProviderRequestsComponent,
+        ProviderDashboardComponent,
+        DashboardComponent
         
     ],
     providers: [],

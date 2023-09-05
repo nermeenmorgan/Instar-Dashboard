@@ -55,7 +55,7 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe(
       () => {
         // Login success, redirection handled in the service
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/admin/dashboard']);
       },
       error => {
         // Handle login error, show error message to user
