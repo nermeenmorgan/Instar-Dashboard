@@ -1,0 +1,54 @@
+<div class="list">
+  <div class="table-header">
+    <div class="item-count">
+      <h2>{{ users.length }}</h2>
+      Users
+    </div>
+    <div class="sort-by">
+      <span>Sort By:</span>
+      <!-- Add dropdown list for sorting here -->
+      <select class="sort-by">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="name">Name</option>
+        <option value="company">Company</option>
+        <option value="city">City</option>
+        <option value="product">Product</option>
+        <option value="subscription">Subscription</option>
+      </select>
+    </div>
+    <div class="search table-search">
+      <label>
+        <input type="text" placeholder="Search" />
+        <span class="material-icons icon">search</span>
+      </label>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <td>FullName</td>
+        <td>E-mail</td>
+        <td>Phone</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td (click)="navigateToUserProfile(user._id)">
+          {{ user.Firstname }} {{ user.Lastname }}
+        </td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td class="action-buttons">
+          <ng-container>
+            <button class="edit-button">Edit</button>
+          </ng-container>
+          <button class="delete-button" (click)="deleteUser(user._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

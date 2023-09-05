@@ -1,60 +1,115 @@
 <div class="auth-container">
   <div class="left-section">
-    <div class="left-content">
-      <div class="next text">Next</div>
-      <div class="title text">Revolution in Sales</div>
-      <div class="description text">
-        <div>Augmented reality</div>
-        <div>Online payment</div>
-        <div>Order tracking</div>
-      </div>
-      <div class="dots">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="133"
-          height="132"
-          viewBox="0 0 133 132"
-          fill="none"
-        >
-          <circle
-            cx="65.0717"
-            cy="18.1121"
-            r="7.5"
-            transform="rotate(43.0682 65.0717 18.1121)"
-            fill="#44566E"
-          />
-          <circle
-            cx="97.4706"
-            cy="97.6754"
-            r="7.5"
-            transform="rotate(43.0682 97.4706 97.6754)"
-            fill="white"
-          />
-          <circle
-            cx="60.8242"
-            cy="59.9984"
-            r="6"
-            transform="rotate(43.0682 60.8242 59.9984)"
-            fill="#23F800"
-          />
-          <circle
-            cx="10.6006"
-            cy="60.2774"
-            r="7.5"
-            transform="rotate(43.0682 10.6006 60.2774)"
-            fill="#0057FF"
-          />
-        </svg>
-      </div>
-      <img
-        class="logo"
-        src="../../../assets/img/logo-white-horizontal-s.png"
-        alt="logo instar"
-      />
-    </div>
+    <app-auth-illustration></app-auth-illustration>
   </div>
-  <div class="register-section">
-    <div class="title">Registration</div>
+  <div class="login-section">
+    <div class="login-card">
+      <div class="login-title text">
+        <p>Welcome to</p>
+        <p class="d">InDar</p>
+      </div>
+      <p class="login-desc text">
+        We provide a user-friendly platform that empowers everyone to optimize
+        their augmented reality experience
+      </p>
+      <div class="status-bar">
+        <div class="l1" [ngClass]="{ b: isEmailFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+      </div>
+      <form (ngSubmit)="register()" class="login-form">
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="checkEmailField()"
+            placeholder="Username or Email"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="checkEmailField()"
+            placeholder="Username or Email"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="checkEmailField()"
+            placeholder="Username or Email"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            (ngModelChange)="checkEmailField()"
+            placeholder="Username or Email"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+
+        <label class="label">Password</label>
+        <div class="form-group">
+          <input
+            type="password"
+            [(ngModel)]="password"
+            (ngModelChange)="checkPasswordField()"
+            placeholder="Password"
+            class="form-control"
+            name="password"
+          />
+        </div>
+        <label class="label">Confirm Password</label>
+        <div class="form-group">
+          <input
+            type="password"
+            [(ngModel)]="password"
+            (ngModelChange)="checkPasswordField()"
+            placeholder="Password"
+            class="form-control"
+            name="password"
+          />
+        </div>
+        <div class="bs">
+          <button type="submit" class="btn-primary">Login</button>
+          <div class="forget-password">
+            <a routerLink="/forget-password">Forgot your Password?</a>
+          </div>
+        </div>
+      </form>
+      <div class="login-error" *ngIf="registerError">{{ registerError }}</div>
+    </div>
+    <!-- <div class="title">Registration</div>
     <div class="register-content">
       <form [formGroup]="registerform" (ngSubmit)="register()">
         <div class="user-details">
@@ -167,6 +222,6 @@
           Already a member? <a routerLink="/login">Login now</a>
         </div>
       </form>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -16,7 +16,46 @@ export class RegisterComponent implements OnInit {
   image: any;
   registerError = '';
 
-  constructor(private fb: FormBuilder, private _auth: AuthService, private router: Router) { }
+  username = '';
+  password = '';
+
+  // status bar color
+
+  isEmailFilled: boolean = false;
+  isPasswordFilled: boolean = false;
+  emailWarning: string = '';
+
+  // Function to check if email field is filled
+  checkEmailField() {
+    this.isEmailFilled = this.username.trim() !== '';
+
+    // Call the checkPasswordField() function only when the email field is filled
+    if (this.isEmailFilled) {
+      this.checkPasswordField();
+    } else {
+      // Reset isPasswordFilled when the email field is not filled
+      this.isPasswordFilled = false;
+
+      // Set the email warning message
+      this.emailWarning = 'Please enter your email first.';
+    }
+  }
+
+  // Function to check if password field is filled
+  checkPasswordField() {
+    // Ensure that this function is only called when the email field is filled
+      this.isPasswordFilled = this.password.trim() !== '';
+ 
+      if (this.isPasswordFilled && !this.isEmailFilled) {
+        this.emailWarning = 'Please enter your email first.';
+        this.isPasswordFilled = false;
+      } else {
+        this.emailWarning = '';
+      }
+    }
+  
+
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.registerform = this.fb.group({
@@ -33,7 +72,7 @@ export class RegisterComponent implements OnInit {
       return; // Form is invalid, don't proceed with registration
     }
 
-    this._auth.register(this.registerform.value)
+    this.authService.register(this.registerform.value)
       .subscribe(
         () => {
           alert("Register Successful");

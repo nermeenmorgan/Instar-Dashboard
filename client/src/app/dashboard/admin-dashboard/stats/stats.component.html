@@ -1,0 +1,228 @@
+<div class="stats-container">
+  <!-- left row -->
+
+  <div class="left-row">
+    <div class="small-column card">
+      <div class="small-box">
+        <div class="sub-box">
+          <div class="cardName">New visitors</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="sub-box">
+          <div class="numbers">
+            <div class="percentage">23%</div>
+            <div class="up-down-perc">
+              <span class="material-icons icon">arrow_upward</span>
+
+              8.75%
+            </div>
+          </div>
+          <div class="visitors-Chart">
+            <canvas id="visitorsChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="small-box">
+        <div class="sub-box">
+          <div class="cardName">Activity</div>
+          <div class="period">Last week</div>
+        </div>
+        <div class="sub-box">
+          <div class="numbers">
+            <div class="percentage">23%</div>
+            <div class="up-down-perc">
+              <span class="material-icons icon">arrow_upward</span>
+              8.75%
+            </div>
+          </div>
+          <div class="activity-Chart">
+            <canvas id="activityChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- total income -->
+
+    <div class="medium-column card">
+      <div class="medium-box">
+        <div class="sub-box">
+          <div class="title-box">
+            <div class="cardName">Total Income</div>
+            <div class="period">Yearly report overview</div>
+          </div>
+          <div class="more-button">
+            <span class="material-icons icon">more_vert</span>
+          </div>
+        </div>
+        <div class="yearly-income-chart">
+          <canvas id="yearlyIncomeChart"></canvas>
+        </div>
+      </div>
+      <div class="medium-box">
+        <div class="sub-box">
+          <div class="title-box">
+            <div class="cardName">Total Income</div>
+            <div class="period">Yearly report overview</div>
+          </div>
+          <div class="more-button">
+            <span class="material-icons icon">more_vert</span>
+          </div>
+        </div>
+        <div class="card-list">
+          <div class="card">
+            <span class="material-icons icon">arrow_upward</span>
+            <div class="income">
+              <div class="title">Income</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">+2.34k</div>
+          </div>
+          <div class="card">
+            <span class="material-icons icon">arrow_upward</span>
+            <div class="income">
+              <div class="title">Expence</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">-1.34k</div>
+          </div>
+          <div class="card">
+            <span class="material-icons icon">arrow_upward</span>
+            <div class="income">
+              <div class="title">Profit</div>
+              <div class="num">$42.845</div>
+            </div>
+            <div class="numbers">+2.34k</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- transactions -->
+
+    <div class="transactions card">
+      <div class="sub-box">
+        <div class="cardName">Transactions</div>
+        <div class="more-button">
+          <span class="material-icons icon">more_vert</span>
+        </div>
+      </div>
+      <div class="card-list transactions-list">
+        <div class="card">
+          <span class="material-icons icon">arrow_upward</span>
+          <div class="income">
+            <div class="title">Income</div>
+            <div class="num">$42.845</div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="material-icons icon">arrow_upward</span>
+          <div class="income">
+            <div class="title">Expence</div>
+            <div class="num">$42.845</div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="material-icons icon">arrow_upward</span>
+          <div class="income">
+            <div class="title">Profit</div>
+            <div class="num">$42.845</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- right row -->
+
+  <div class="right-row">
+    <!-- conversion -->
+
+    <div class="conversion card">
+      <div class="sub-box">
+        <div class="title-box">
+          <div class="cardName">Converstion Rate</div>
+          <div class="period">Compared to last month</div>
+        </div>
+        <div class="more-button">
+          <span class="material-icons icon">more_vert</span>
+        </div>
+      </div>
+      <div class="sub-box perc">
+        <div class="numbers">
+          <div class="percentage">23%</div>
+          <div class="up-down-perc">
+            <span class="material-icons icon">arrow_upward</span>
+            8.75%
+          </div>
+        </div>
+        <div class="conversion-Chart">
+          <canvas id="conversionChart"></canvas>
+        </div>
+      </div>
+      <div class="card-list conversion-list">
+        <div class="card">
+          <div class="income">
+            <div class="title">Income</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">
+            <span class="material-icons conv-icon">arrow_upward</span>
+
+            +2.34k
+          </div>
+        </div>
+        <div class="card">
+          <div class="income">
+            <div class="title">Expence</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">
+            <span class="material-icons conv-icon">arrow_upward</span>
+
+            +2.34k
+          </div>
+        </div>
+        <div class="card">
+          <div class="income">
+            <div class="title">Profit</div>
+            <div class="desc">$42.845</div>
+          </div>
+          <div class="up-down-num numbers">+2.34k</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards grid -->
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="sub-box">
+          <div class="period">Revenue</div>
+          <div class="cardName">$42.57</div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="period">Sales</div>
+          <div class="cardName">482k</div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="period">Delivered Models</div>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="sub-box">
+          <div class="period">Requests</div>
+          <div class="cardName"></div>
+        </div>
+        <div class="chart"></div>
+      </div>
+    </div>
+  </div>
+</div>
