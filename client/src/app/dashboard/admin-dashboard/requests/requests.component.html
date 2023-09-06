@@ -1,1 +1,60 @@
-<p>requests works!</p>
+<div class="container">
+  <div class="list">
+    <div class="table-header">
+      <div class="item-count">
+        <h2>{{ requests.length }}</h2>
+        Requests
+      </div>
+      <div class="sort-by">
+        <span>Sort By:</span>
+        <!-- Add dropdown list for sorting here -->
+        <select>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="name">Name</option>
+          <option value="company">Company</option>
+          <option value="city">City</option>
+          <option value="product">Product</option>
+          <option value="subscription">Subscription</option>
+        </select>
+      </div>
+      <div class="search table-search">
+        <label>
+          <input type="text" placeholder="Search" />
+          <span class="material-icons icon">search</span>
+        </label>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <td>Client</td>
+          <td>Product</td>
+          <td>Date</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>David Brown</td>
+          <td>Fabric Sofa</td>
+          <td>20/08/2023</td>
+        </tr>
+        <tr>
+          <td>David Brown</td>
+          <td>Fabric Sofa</td>
+          <td>20/08/2023</td>
+        </tr>
+        <tr>
+          <td>David Brown</td>
+          <td>Fabric Sofa</td>
+          <td>20/08/2023</td>
+        </tr>
+        <tr>
+          <td>David Brown</td>
+          <td>Fabric Sofa</td>
+          <td>20/08/2023</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

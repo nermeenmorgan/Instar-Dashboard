@@ -1,1 +1,52 @@
-<p>provider-products works!</p>
+<div class="container">
+  <div class="list">
+    <div class="details">
+      <div class="table-header">
+        <div class="item-count">
+          <h2>{{ products.length }}</h2>
+          Products
+        </div>
+        <div class="sort-by">
+          <span>Sort By:</span>
+          <select [(ngModel)]="selectedSort">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="quantity">Quantity</option>
+            <option value="category">Category</option>
+            <option value="subCategory">SubCategory</option>
+          </select>
+        </div>
+        <div class="search table-search">
+          <label>
+            <input type="text" placeholder="Search" />
+            <span class="material-icons icon">search</span>
+          </label>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>Product Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Category</td>
+            <td>SubCategory</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products; let i = index">
+            <td>{{ p.name }}</td>
+            <td>{{ p.description }}</td>
+            <td>{{ p.price | currency : "USD" }}</td>
+            <td>{{ p.quantity }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.subCategory }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -4,10 +4,12 @@ import { ProviderProfileComponent } from 'src/app/dashboard/provider-dashboard/p
 import { ProviderProductsComponent } from 'src/app/dashboard/provider-dashboard/products/provider-products.component';
 import { ProviderRequestsComponent } from 'src/app/dashboard/provider-dashboard/requests/provider-requests.component';
 import { ProviderDashboardComponent } from 'src/app/dashboard/provider-dashboard/dashboard/provider-dashboard.component';
+import { ProviderSalesComponent } from 'src/app/dashboard/provider-dashboard/sales/sales.component';
 
 export const ProviderLayoutRoutes: Routes = [
     { path: 'dashboard', component: ProviderDashboardComponent, data: { pageTitle: 'Dashboard' } },
     { path: 'products', component: ProviderProductsComponent, data: { pageTitle: 'Products List' }},
     { path: 'requests', component: ProviderRequestsComponent, data: { pageTitle: 'Requests' }},
+    { path: 'sales', component: ProviderSalesComponent, data: { pageTitle: 'Sales' }},
     { path: 'profile/:id', component: ProviderProfileComponent, data: { pageTitle: 'User Profile' }}  
 ];

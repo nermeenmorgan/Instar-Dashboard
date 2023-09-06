@@ -14,7 +14,6 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-
 .edit-button {
   background-color: #3498db;
   color: #fff;
@@ -31,13 +30,17 @@
   
 /* ================= list ================ */
 
+.container{
+  padding: 20px;
+}
+
 .list {
   position: relative;
   display: grid;
   width: 100%;
   margin-top: 10px;
   min-height: 450px;
-  background: var(--white-2);
+  background: #FBFBFB;
   padding: 20px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -64,7 +67,54 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 5px;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.sort-by select{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    background: #6496F7;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  background-color: var(--white-2);
+}
+
+.search label .icon {
+  position: absolute;
+  top: 0;
+  left: 92%;
+  right: 20px;
+  transform: translateY(-10%);
+  font-size: 25px;
+  color: var(--black);
 }
 
 .table-search {

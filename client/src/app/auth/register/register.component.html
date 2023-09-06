@@ -13,21 +13,21 @@
         their augmented reality experience
       </p>
       <div class="status-bar">
-        <div class="l1" [ngClass]="{ b: isEmailFilled }"></div>
-        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
-        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
-        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
-        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
-        <div class="l2" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l" [ngClass]="{ b: isEmailFilled }"></div>
+        <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
+        <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
       </div>
       <form (ngSubmit)="register()" class="login-form">
-        <label class="label">Email</label>
+        <label class="label">Username</label>
         <div class="form-group">
           <input
             type="text"
             [(ngModel)]="username"
             (ngModelChange)="checkEmailField()"
-            placeholder="Username or Email"
+            placeholder="Username"
             class="form-control"
             name="username"
           />
@@ -41,35 +41,21 @@
             type="text"
             [(ngModel)]="username"
             (ngModelChange)="checkEmailField()"
-            placeholder="Username or Email"
+            placeholder="Email"
             class="form-control"
-            name="username"
+            name="email"
           />
           <div class="email-error login-error" *ngIf="emailWarning">
             {{ emailWarning }}
           </div>
         </div>
-        <label class="label">Email</label>
+        <label class="label">Phone Number</label>
         <div class="form-group">
           <input
             type="text"
             [(ngModel)]="username"
             (ngModelChange)="checkEmailField()"
-            placeholder="Username or Email"
-            class="form-control"
-            name="username"
-          />
-          <div class="email-error login-error" *ngIf="emailWarning">
-            {{ emailWarning }}
-          </div>
-        </div>
-        <label class="label">Email</label>
-        <div class="form-group">
-          <input
-            type="text"
-            [(ngModel)]="username"
-            (ngModelChange)="checkEmailField()"
-            placeholder="Username or Email"
+            placeholder="Phone Number"
             class="form-control"
             name="username"
           />
@@ -95,133 +81,21 @@
             type="password"
             [(ngModel)]="password"
             (ngModelChange)="checkPasswordField()"
-            placeholder="Password"
+            placeholder="Confirm Password"
             class="form-control"
             name="password"
           />
         </div>
         <div class="bs">
-          <button type="submit" class="btn-primary">Login</button>
+          <button type="submit" class="btn-primary">Register</button>
           <div class="forget-password">
-            <a routerLink="/forget-password">Forgot your Password?</a>
+            Already a member?
+            <a routerLink="/login">Login now</a>
           </div>
         </div>
       </form>
       <div class="login-error" *ngIf="registerError">{{ registerError }}</div>
+      <div class="login-link text"></div>
     </div>
-    <!-- <div class="title">Registration</div>
-    <div class="register-content">
-      <form [formGroup]="registerform" (ngSubmit)="register()">
-        <div class="user-details">
-          <div class="input-box form-group">
-            <label class="details">First Name</label>
-            <input
-              type="text"
-              formControlName="Firstname"
-              placeholder="Enter your first name"
-              minlength="3"
-              maxlength="20"
-              required
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                registerform.get('Firstname')?.invalid &&
-                registerform.get('Firstname')?.touched
-              "
-            >
-              First Name must be between 3 and 20 characters.
-            </div>
-          </div>
-          <div class="input-box form-group">
-            <label class="details">Last Name</label>
-            <input
-              type="text"
-              formControlName="Lastname"
-              placeholder="Enter your last name"
-              minlength="3"
-              maxlength="20"
-              required
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                registerform.get('Lastname')?.invalid &&
-                registerform.get('Lastname')?.touched
-              "
-            >
-              Last Name must be between 3 and 20 characters.
-            </div>
-          </div>
-
-          <div class="input-box form-group">
-            <label class="details">Email</label>
-            <input
-              type="email"
-              formControlName="email"
-              placeholder="Enter your email"
-              required
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                registerform.get('email')?.invalid &&
-                registerform.get('email')?.touched
-              "
-            >
-              Please enter a valid email.
-            </div>
-          </div>
-          <div class="input-box form-group">
-            <label class="details">Phone Number</label>
-            <input
-              type="number"
-              formControlName="phone"
-              placeholder="Enter your number"
-              required
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                registerform.get('phone')?.invalid &&
-                registerform.get('phone')?.touched
-              "
-            >
-              Phone Number is required.
-            </div>
-          </div>
-          <div class="input-box form-group">
-            <label class="details">Password</label>
-            <input
-              type="password"
-              formControlName="password"
-              placeholder="Enter your password"
-              required
-            />
-            <div
-              class="error-message"
-              *ngIf="
-                registerform.get('password')?.invalid &&
-                registerform.get('password')?.touched
-              "
-            >
-              Password is required.
-            </div>
-          </div>
-        </div>
-        <div class="login-error" *ngIf="registerError">{{ registerError }}</div>
-
-        <div class="button">
-          <input
-            type="submit"
-            value="Register"
-            [disabled]="registerform.invalid"
-          />
-        </div>
-        <div class="signup-link">
-          Already a member? <a routerLink="/login">Login now</a>
-        </div>
-      </form>
-    </div> -->
   </div>
 </div>

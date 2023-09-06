@@ -13,11 +13,16 @@
     </label>
   </div>
   <div class="notif-area">
-    <div class="msg">
-      <span class="material-icons icon">message</span>
-    </div>
-    <div class="notif">
-      <span class="material-icons icon">notifications</span>
+    <div class="user" (click)="navigateToUserProfile()">
+      <div class="user-name">John Doe</div>
+      <div class="user-arrow">
+        <span class="material-icons">keyboard_arrow_down</span>
+      </div>
+      <img
+        class="user-img"
+        src="../../../../assets/img/users/user1.jpg"
+        alt="User picture"
+      />
     </div>
   </div>
 </div>

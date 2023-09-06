@@ -61,8 +61,7 @@
     margin-bottom: 70px;
 }
 
-.l1,
-.l2 {
+.l{
     width: 60px;
     height: 4px;
     flex-shrink: 0;
@@ -140,6 +139,7 @@
     margin-bottom: 20px;
     text-align: left;
 }
+
 
 /* Responsive styles for screens with a width of 400px or less */
 @media screen and (min-width:0px) and (max-width: 768px) {
