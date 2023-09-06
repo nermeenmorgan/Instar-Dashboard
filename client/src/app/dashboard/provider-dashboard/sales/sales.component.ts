@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { SaleService } from 'src/app/services/sale.service';
 
 @Component({
-  selector: 'app-sales',
+  selector: 'app-provider-sales',
   templateUrl: './sales.component.html',
   styleUrls: ['./sales.component.css']
 })
-export class SalesComponent {
+export class ProviderSalesComponent {
 
   sales: any[] = [];
 
@@ -18,7 +18,7 @@ export class SalesComponent {
   }
 
   getSales() {
-    this.saleService.getAllSales().subscribe(
+    this.saleService.getSalesBySupplier().subscribe(
       (data: any[]) => {
         this.sales = data;
         console.log(this.sales);

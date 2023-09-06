@@ -44,16 +44,19 @@ export class RegisterComponent implements OnInit {
   // Function to check if password field is filled
   checkPasswordField() {
     // Ensure that this function is only called when the email field is filled
-      this.isPasswordFilled = this.password.trim() !== '';
- 
-      if (this.isPasswordFilled && !this.isEmailFilled) {
-        this.emailWarning = 'Please enter your email first.';
-        this.isPasswordFilled = false;
-      } else {
-        this.emailWarning = '';
-      }
+    this.isPasswordFilled = this.password.trim() !== '';
+
+    if (this.isPasswordFilled && !this.isEmailFilled) {
+      this.emailWarning = 'Please enter your email first.';
+      this.isPasswordFilled = false;
+    } else {
+      this.emailWarning = '';
     }
+  }
   
+  inputIsFocused() {
+    
+  }
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 

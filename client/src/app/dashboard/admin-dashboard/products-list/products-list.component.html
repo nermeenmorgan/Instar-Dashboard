@@ -1,74 +1,76 @@
-<div class="list">
-  <div class="details">
-    <div class="table-header">
-      <div class="item-count">
-        <h2>{{ products.length }}</h2>
-        Products
+<div class="container">
+  <div class="list">
+    <div class="details">
+      <div class="table-header">
+        <div class="item-count">
+          <h2>{{ products.length }}</h2>
+          Products
+        </div>
+        <div class="sort-by">
+          <span>Sort By:</span>
+          <select class="sort-by" [(ngModel)]="selectedSort">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="name">Name</option>
+            <option value="company">Company</option>
+            <option value="city">City</option>
+            <option value="product">Product</option>
+            <option value="subscription">Subscription</option>
+          </select>
+        </div>
+        <div class="search table-search">
+          <label>
+            <input type="text" placeholder="Search" />
+            <span class="material-icons icon">search</span>
+          </label>
+        </div>
       </div>
-      <div class="sort-by">
-        <span>Sort By:</span>
-        <select class="sort-by" [(ngModel)]="selectedSort">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="name">Name</option>
-          <option value="company">Company</option>
-          <option value="city">City</option>
-          <option value="product">Product</option>
-          <option value="subscription">Subscription</option>
-        </select>
-      </div>
-      <div class="search table-search">
-        <label>
-          <input type="text" placeholder="Search" />
-          <span class="material-icons icon">search</span>
-        </label>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <td>Product Name</td>
-          <td>Description</td>
-          <td>Price</td>
-          <td>Quantity</td>
-          <td>Category</td>
-          <td>SubCategory</td>
-          <td>Actions</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of products; let i = index">
-          <td>{{ p.name }}</td>
-          <td>{{ p.description }}</td>
-          <td>{{ p.price | currency : "USD" }}</td>
-          <td>{{ p.quantity }}</td>
-          <td>{{ p.category }}</td>
-          <td>{{ p.subCategory }}</td>
-          <td class="action-buttons">
-            <ng-container *ngIf="editingProductId !== p._id; else editFields">
-              <button class="edit-button" (click)="editOrSaveProduct(p.id)">
-                Edit
-              </button>
-            </ng-container>
-            <ng-template #editFields>
-              <input
-                [(ngModel)]="editedProductData.name"
-                [disabled]="editingProductId !== p.id"
-              />
+      <table>
+        <thead>
+          <tr>
+            <td>Product Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Category</td>
+            <td>SubCategory</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products; let i = index">
+            <td>{{ p.name }}</td>
+            <td>{{ p.description }}</td>
+            <td>{{ p.price | currency : "USD" }}</td>
+            <td>{{ p.quantity }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.subCategory }}</td>
+            <td class="action-buttons">
+              <ng-container *ngIf="editingProductId !== p._id; else editFields">
+                <button class="edit-button" (click)="editOrSaveProduct(p.id)">
+                  Edit
+                </button>
+              </ng-container>
+              <ng-template #editFields>
+                <input
+                  [(ngModel)]="editedProductData.name"
+                  [disabled]="editingProductId !== p.id"
+                />
 
-              <button class="save-button" (click)="editOrSaveProduct(p.id)">
-                Save
+                <button class="save-button" (click)="editOrSaveProduct(p.id)">
+                  Save
+                </button>
+                <button class="cancel-button" (click)="cancelEdit()">
+                  Cancel
+                </button>
+              </ng-template>
+              <button class="delete-button" (click)="deleteProduct(p._id)">
+                Delete
               </button>
-              <button class="cancel-button" (click)="cancelEdit()">
-                Cancel
-              </button>
-            </ng-template>
-            <button class="delete-button" (click)="deleteProduct(p._id)">
-              Delete
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -1,0 +1,195 @@
+@import 'material-icons/iconfont/material-icons.css';
+
+:root {
+    --light-blue: #6496F7;
+    --blue: #666ADF;
+    --white: #fff;
+    --white-2: #F9F9F9;
+    --white-bg: #EDF5FF;
+    --grey: #F2F2F2;
+    --grey2: #c4c4c4;
+    --black: #242529;
+    --up-green: #71DD37;
+    --down-red: #FF3E1D;
+    --stats-gap: 15px;
+}
+
+.user-container {
+    color: #242529;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Public Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    height: 85vh;
+    gap: var(--stats-gap);
+    padding: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 24px;
+    background-color: #FFFFFF;
+    box-shadow:
+        0px 2px 6px 4px rgba(50, 71, 92, 0.02),
+        0px 4px 9px 1px rgba(50, 71, 92, 0.04),
+        0px 2px 9px 0px rgba(50, 71, 92, 0.06);
+}
+
+/* left row */
+
+.left-row {
+    gap: var(--stats-gap);
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+}
+
+.user-details {
+    padding: 0;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: stretch;
+    overflow: hidden
+}
+
+.basic-info {
+    width: 40%;
+    height: 50%;
+    padding: 24px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.status .product,
+.status .pending {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.more-info {
+    width: 60%;
+    height: 50%;
+    padding: 24px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: 5px solid var(--white-bg);
+}
+
+.info {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.title-box {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.monthly-income .title,
+.right-row .title {
+    color: #242529;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.user-img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.total-income .title-box {
+    flex-direction: column;
+}
+
+.up-down-perc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.more-button {
+    cursor: pointer;
+}
+
+/* right row */
+
+.right-row {
+    gap: var(--stats-gap);
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* charts */
+
+.yearly-income-chart {
+    width: 40vw;
+    height: 40vh;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.yearly-income-chart canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.total-income-chart {
+    width: 25vw;
+    height: 20vh;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}

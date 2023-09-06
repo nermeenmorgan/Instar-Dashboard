@@ -18,7 +18,7 @@ export class UsersListComponent implements OnInit {
   }
 
   navigateToUserProfile(userId: number) {
-    this.router.navigate(['/user-profile', userId]);
+    this.router.navigate(['/admin/user-profile', userId]);
   }
 
   getUsers() {

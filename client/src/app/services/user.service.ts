@@ -100,6 +100,10 @@ export class UserService {
     return this.http.get<any[]>(`${this.apiUrl}/users`);
   }
 
+  getProfileById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/users/${id}/profile`);
+  }
+
   getUserById(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/users/${id}`);
   }

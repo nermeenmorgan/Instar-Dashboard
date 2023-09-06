@@ -10,6 +10,10 @@ export class ProductService {
 
   private apiUrl = 'http://localhost:9000/api';
 
+  getProductsBySupplier() {
+    return this.http.get(`${this.apiUrl}/products`);
+  }
+
   getProducts() {
     return this.http.get(`${this.apiUrl}/products`);
   }

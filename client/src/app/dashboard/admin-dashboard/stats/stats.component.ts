@@ -8,7 +8,7 @@ import { Chart } from 'chart.js';
 })
 export class StatsComponent implements OnInit {
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     const visitorsCtx = document.getElementById('visitorsChart') as HTMLCanvasElement;
     const activityCtx = document.getElementById('activityChart') as HTMLCanvasElement;
     const yearlyIncomeCtx = document.getElementById('yearlyIncomeChart') as HTMLCanvasElement;
