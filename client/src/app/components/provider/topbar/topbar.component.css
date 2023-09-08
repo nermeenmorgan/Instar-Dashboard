@@ -118,3 +118,61 @@
     align-items: center;
     background: var(--light-blue);
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+    .topbar {
+        height: 50px;
+        margin-top: 0;
+        /* Adjust the topbar height as needed */
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        /* Adjust the font size as needed */
+    }
+
+    .search {
+        width: 300px;
+        /* Adjust the search width as needed */
+    }
+
+    .search label .icon {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 90%;
+        height: 35px;
+        transform: translateY(-10%);
+        color: var(--black);
+    }
+
+    .search label input {
+        height: 30px;
+        /* Adjust the input height as needed */
+        font-size: 16px;
+        /* Adjust the input font size as needed */
+    }
+
+    .notif-area .icon {
+        width: 30px;
+        /* Adjust the icon size as needed */
+        height: 30px;
+        font-size: 16px;
+        /* Adjust the icon font size as needed */
+    }
+
+    .user {
+        height: 40px;
+        /* Adjust the user area height as needed */
+        font-size: 16px;
+        /* Adjust the user area font size as needed */
+    }
+
+    /* Make the user image smaller */
+    .user-img {
+        width: 40px;
+        /* Adjust the user image width as needed */
+        height: 40px;
+        /* Adjust the user image height as needed */
+    }
+}

@@ -182,3 +182,53 @@ body {
     bottom: 0;
     margin-bottom: 32px;
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+    :root {
+        --sidebar-width: 250px;
+        /* Adjust the width as needed */
+    }
+
+    .navigation {
+        width: var(--sidebar-width);
+        border-left: 15px solid var(--light-blue);
+    }
+
+    .navigation ul li {
+        margin-top: 10px;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+        /* Adjust the font size as needed */
+    }
+
+    .navigation ul li .icon {
+        font-size: 1.25rem;
+        padding-left: 20px;
+        /* Adjust the icon size as needed */
+    }
+
+    .navigation ul li a .title {
+        padding: 0 5px;
+        padding-left: 15px;
+    }
+
+    .navigation ul li:last-child:hover a::after,
+    .navigation ul li:last-child.hovered a::after {
+        box-shadow: 35px -35px 0 10px var(--white-bg);
+    }
+
+    .navigation ul li:last-child {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 32px;
+    }
+
+    .logo img {
+        width: 150px;
+        /* Adjust the width as needed */
+        height: 150px;
+        /* Adjust the height as needed */
+    }
+}
