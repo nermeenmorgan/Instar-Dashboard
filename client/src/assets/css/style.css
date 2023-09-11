@@ -29,14 +29,21 @@ body {
     --up-green: #71DD37;
     --down-red: #FF3E1D;
     --stats-gap: 15px;
+    --sidebar-width: 300px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
 }
 
 /* ================ Main ================ */
 .main {
     position: absolute;
     top: 0;
-    left: 300px;
-    width: calc(100% - 300px);
+    left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
     min-height: 100vh;
     height: 100%;
     padding: 30px;
@@ -129,3 +136,14 @@ body {
     margin-top: 10px;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+    :root {
+        --sidebar-width: 250px;
+    }
+
+    .main {
+        padding: 20px;
+        left: var(--sidebar-width);
+        width: calc(100% - var(--sidebar-width));
+    }
+}

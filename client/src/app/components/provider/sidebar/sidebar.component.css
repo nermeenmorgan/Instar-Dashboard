@@ -29,6 +29,7 @@ body {
     --up-green: #71DD37;
     --down-red: #FF3E1D;
     --stats-gap: 15px;
+    --sidebar-width: 300px;
 }
 
 /* ================ Logo ================ */
@@ -46,22 +47,16 @@ body {
     flex-shrink: 0;
 }
 
-.container {
-    display: flex;
-    position: relative;
-    width: 100%;
-}
-
 
 /* ================ Navigation ================ */
 .navigation {
     position: fixed;
-    width: 300px;
+    width: var(--sidebar-width);
     height: 100%;
     background: var(--light-blue);
     border-left: 25px solid var(--light-blue);
     border-radius: 0px 30px 30px 0px;
-
+    font-size: 14px;
     overflow: hidden;
 }
 
@@ -181,4 +176,43 @@ body {
     position: fixed;
     bottom: 0;
     margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+    :root {
+        --sidebar-width: 250px;
+        /* Adjust the width as needed */
+    }
+
+    .navigation {
+        width: var(--sidebar-width);
+        border-left: 15px solid var(--light-blue);
+    }
+
+    .navigation ul li {
+        margin-top: 10px;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+        /* Adjust the font size as needed */
+    }
+
+    .navigation ul li .icon {
+        font-size: 1.25rem;
+        padding-left: 20px;
+        /* Adjust the icon size as needed */
+    }
+    .navigation ul li a .title {
+        
+        padding: 0 5px;
+        padding-left: 15px;
+    }
+
+    .logo img {
+        width: 150px;
+        /* Adjust the width as needed */
+        height: 150px;
+        /* Adjust the height as needed */
+    }
 }
