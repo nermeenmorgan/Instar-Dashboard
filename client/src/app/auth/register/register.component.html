@@ -6,27 +6,28 @@
     <div class="login-card">
       <div class="login-title text">
         <p>Welcome to</p>
-        <p class="d">InDar</p>
+        <p class="d">Instar</p>
       </div>
       <p class="login-desc text">
         We provide a user-friendly platform that empowers everyone to optimize
         their augmented reality experience
       </p>
-      <div class="status-bar">
+      <!-- <div class="status-bar">
         <div class="l" [ngClass]="{ b: isEmailFilled }"></div>
         <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
         <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
         <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
         <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
         <div class="l" [ngClass]="{ b: isPasswordFilled }"></div>
-      </div>
+      </div> -->
       <form (ngSubmit)="register()" class="login-form">
-        <label class="label">Username</label>
+
+        <label class="label">First Name</label>
         <div class="form-group">
           <input
             type="text"
             [(ngModel)]="username"
-            (ngModelChange)="checkEmailField()"
+            (ngModelChange)="checkUserNameField()"
             placeholder="Username"
             class="form-control"
             name="username"
@@ -35,11 +36,27 @@
             {{ emailWarning }}
           </div>
         </div>
-        <label class="label">Email</label>
+
+        <label class="label">Last Name</label>
         <div class="form-group">
           <input
             type="text"
             [(ngModel)]="username"
+            (ngModelChange)="checkUserNameField()"
+            placeholder="Username"
+            class="form-control"
+            name="username"
+          />
+          <div class="email-error login-error" *ngIf="emailWarning">
+            {{ emailWarning }}
+          </div>
+        </div>
+
+        <label class="label">Email</label>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="email"
             (ngModelChange)="checkEmailField()"
             placeholder="Email"
             class="form-control"
@@ -53,11 +70,11 @@
         <div class="form-group">
           <input
             type="text"
-            [(ngModel)]="username"
-            (ngModelChange)="checkEmailField()"
+            [(ngModel)]="phone"
+            (ngModelChange)="checkPhoneNumberField()"
             placeholder="Phone Number"
             class="form-control"
-            name="username"
+            name="phone"
           />
           <div class="email-error login-error" *ngIf="emailWarning">
             {{ emailWarning }}

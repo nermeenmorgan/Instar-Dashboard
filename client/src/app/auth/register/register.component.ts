@@ -6,11 +6,8 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css',
-    '../../components/auth-illustration/auth-illustration.component.css']
+  styleUrls: ['./register.component.css', '../../components/auth-illustration/auth-illustration.component.css']
 })
-// ... imports and component decorator ...
-
 export class RegisterComponent implements OnInit {
   registerform!: FormGroup;
   image: any;
@@ -18,45 +15,14 @@ export class RegisterComponent implements OnInit {
 
   username = '';
   password = '';
-
-  // status bar color
+  email = '';
+  phone = '';
 
   isEmailFilled: boolean = false;
   isPasswordFilled: boolean = false;
   emailWarning: string = '';
-
-  // Function to check if email field is filled
-  checkEmailField() {
-    this.isEmailFilled = this.username.trim() !== '';
-
-    // Call the checkPasswordField() function only when the email field is filled
-    if (this.isEmailFilled) {
-      this.checkPasswordField();
-    } else {
-      // Reset isPasswordFilled when the email field is not filled
-      this.isPasswordFilled = false;
-
-      // Set the email warning message
-      this.emailWarning = 'Please enter your email first.';
-    }
-  }
-
-  // Function to check if password field is filled
-  checkPasswordField() {
-    // Ensure that this function is only called when the email field is filled
-    this.isPasswordFilled = this.password.trim() !== '';
-
-    if (this.isPasswordFilled && !this.isEmailFilled) {
-      this.emailWarning = 'Please enter your email first.';
-      this.isPasswordFilled = false;
-    } else {
-      this.emailWarning = '';
-    }
-  }
-  
-  inputIsFocused() {
-    
-  }
+  isPhoneNumberFilled: boolean = false;
+  isUserNameFilled: boolean = false;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
@@ -68,6 +34,50 @@ export class RegisterComponent implements OnInit {
       phone: ['', [Validators.required]],
       password: ['', [Validators.required]],
     });
+  }
+
+  checkEmailField() {
+    this.isEmailFilled = this.email.trim() !== '';
+
+    if (this.isEmailFilled) {
+      this.checkPasswordField();
+    } else {
+      this.isPasswordFilled = false;
+      this.emailWarning = 'Please enter your email first.';
+    }
+  }
+
+  checkPhoneNumberField() {
+    this.isPhoneNumberFilled = this.phone.trim() !== '';
+
+    if (this.isUserNameFilled && !this.isEmailFilled) {
+      this.emailWarning = 'Please enter your email first.';
+      this.isPasswordFilled = false;
+    } else {
+      this.emailWarning = '';
+    }
+  }
+
+  checkUserNameField() {
+    this.isUserNameFilled = this.username.trim() !== '';
+
+    if (this.isPasswordFilled && !this.isEmailFilled) {
+      this.emailWarning = 'Please enter your email first.';
+      this.isPasswordFilled = false;
+    } else {
+      this.emailWarning = '';
+    }
+  }
+
+  checkPasswordField() {
+    this.isPasswordFilled = this.password.trim() !== '';
+
+    if (this.isPasswordFilled && !this.isEmailFilled) {
+      this.emailWarning = 'Please enter your email first.';
+      this.isPasswordFilled = false;
+    } else {
+      this.emailWarning = '';
+    }
   }
 
   register() {
@@ -85,7 +95,6 @@ export class RegisterComponent implements OnInit {
         error => {
           alert(`Register Failed: ${error.error.message}`);
           this.registerError = error.error.message;
-
         }
       );
   }
@@ -94,4 +103,3 @@ export class RegisterComponent implements OnInit {
     this.image = e.target.files[0];
   }
 }
-
